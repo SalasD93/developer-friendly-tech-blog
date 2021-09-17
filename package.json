@@ -1,0 +1,36 @@
+{
+  "name": "developer-friendly-tech-blog",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "seed": "node seeds/index.js",
+    "start": "node server.js"
+  },
+  "author": "Diana Salas",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "connect-session-sequelize": "^6.1.1",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "handlebars": "^4.7.3",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.5",
+    "tailwindcss": "^2.2.15"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  },
+  "description": "challenge 14",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalasD93/developer-friendly-tech-blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SalasD93/developer-friendly-tech-blog/issues"
+  },
+  "homepage": "https://github.com/SalasD93/developer-friendly-tech-blog#readme"
+}
