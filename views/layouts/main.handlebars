@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geeky Nerdy Techy Blog</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="flex items-center justify-start flex-wrap bg-gray-900 p-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-6 border-4 border-green-600 border-double">
+      <a href="/" class="font-semibold text-xl tracking-tight">Geeky Nerdy Techy Blog</a>
+    </div>
+    <ul class="flex justify-between">
+      <li class="mr-3">
+        <a class="inline-block border border-green-300 rounded py-0 px-10 bg-green-300 hover:bg-green-400 text-white" href="#">HOME</a>
+      </li>
+      {{#if loggedIn}}
+      <li class="mr-3">
+        <a class="inline-block border border-green-300 rounded py-0 px-10 bg-green-300 hover:bg-green-400 text-white" href="/dashboard">DASHBOARD</a>
+      </li>
+      <li class="mr-3">
+        <a id="logout" class="inline-block border border-green-300 rounded py-0 px-10 bg-green-300 hover:bg-green-400 text-white" href="/logout">LOGOUT</a>
+      </li>
+      {{else}}
+      <li class="mr-3">
+        <a class="inline-block border border-green-300 rounded py-0 px-10 bg-green-300 hover:bg-green-400 text-white" href="/login">LOGIN</a>
+      </li>
+      {{/if}}
+    </ul>
+  </nav>
+  <div class="wrapper">
+  <main>
+    {{{ body }}}
+  </main>
+  <footer>
+    Thanks for visiting!
+  </footer>
+  </div>
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
