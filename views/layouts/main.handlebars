@@ -9,25 +9,25 @@
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
-  <nav class="flex items-center justify-start flex-wrap bg-gray-900 p-6">
-    <div class="flex items-center flex-shrink-0 text-white mr-6 border-4 border-green-600 border-double">
+<body class="bg-gray-300">
+  <nav class="flex items-center justify-between flex-wrap bg-gray-900 p-6">
+    <div class="flex items-center flex-shrink-0 text-white  border-4 border-green-600 border-double">
       <a href="/" class="font-semibold text-xl tracking-tight">Geeky Nerdy Techy Blog</a>
     </div>
     <ul class="flex justify-between">
       <li class="mr-3">
-        <a class="inline-block border border-green-300 rounded py-0 px-10 bg-green-300 hover:bg-green-400 text-white" href="/">HOME</a>
+        <a class="inline-block border border-green-300 rounded py-0 w-max mt-2 bg-green-300 hover:bg-green-400 text-white" href="/">HOME</a>
       </li>
       {{#if loggedIn}}
       <li class="mr-3">
-        <a class="inline-block border border-green-300 rounded py-0 px-10 bg-green-300 hover:bg-green-400 text-white" href="/dashboard">DASHBOARD</a>
+        <a class="inline-block border border-green-300 rounded py-0 w-max mt-2 bg-green-300 hover:bg-green-400 text-white" href="/dashboard">DASHBOARD</a>
       </li>
       <li class="mr-3">
-        <a id="logout" class="inline-block border border-green-300 rounded py-0 px-10 bg-green-300 hover:bg-green-400 text-white" id="#logout">LOGOUT</a>
+        <a id="logout" class="inline-block border border-green-300 rounded py-0 w-max mt-2 bg-green-300 hover:bg-green-400 text-white" id="#logout">LOGOUT</a>
       </li>
       {{else}}
       <li class="mr-3">
-        <a class="inline-block border border-green-300 rounded py-0 px-10 bg-green-300 hover:bg-green-400 text-white" href="/login">LOGIN</a>
+        <a class="inline-block border border-green-300 rounded py-0 w-max mt-2 bg-green-300 hover:bg-green-400 text-white" href="/login">LOGIN</a>
       </li>
       {{/if}}
     </ul>
