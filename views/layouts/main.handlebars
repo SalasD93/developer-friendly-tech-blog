@@ -16,14 +16,14 @@
     </div>
     <ul class="flex justify-between">
       <li class="mr-3">
-        <a class="inline-block border border-green-300 rounded py-0 px-10 bg-green-300 hover:bg-green-400 text-white" href="#">HOME</a>
+        <a class="inline-block border border-green-300 rounded py-0 px-10 bg-green-300 hover:bg-green-400 text-white" href="/">HOME</a>
       </li>
       {{#if loggedIn}}
       <li class="mr-3">
         <a class="inline-block border border-green-300 rounded py-0 px-10 bg-green-300 hover:bg-green-400 text-white" href="/dashboard">DASHBOARD</a>
       </li>
       <li class="mr-3">
-        <a id="logout" class="inline-block border border-green-300 rounded py-0 px-10 bg-green-300 hover:bg-green-400 text-white" href="/logout">LOGOUT</a>
+        <a id="logout" class="inline-block border border-green-300 rounded py-0 px-10 bg-green-300 hover:bg-green-400 text-white" id="#logout">LOGOUT</a>
       </li>
       {{else}}
       <li class="mr-3">

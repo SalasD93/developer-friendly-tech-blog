@@ -19,16 +19,16 @@ router.get('/', (req, res) => {
         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
         include: {
           model: User,
-          attributes: ['username']
+          attributes: ['name']
         }
       },
       {
         model: User,
-        attributes: ['username']
+        attributes: ['name']
       }
     ],
     // This allows the newest posts to display first
-    order: [['id', DESC]]
+    order: [['id', 'DESC']]
   })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
@@ -63,12 +63,12 @@ router.get('/post/:id', (req, res) => {
         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
         include: {
           model: User,
-          attributes: ['username']
+          attributes: ['name']
         }
       },
       {
         model: User,
-        attributes: ['username']
+        attributes: ['name']
       }
     ]
   })
@@ -92,7 +92,7 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
-// This gets the login in handlebars to display
+// This gets the login handlebars to display
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -101,5 +101,13 @@ router.get('/login', (req, res) => {
   
   res.render('login');
 });
-
+// This gets the signup handlebars and displays them
+router.get('/signup', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  
+  res.render('signup');
+});
 module.exports = router;

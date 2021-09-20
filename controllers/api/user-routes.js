@@ -54,7 +54,7 @@ router.get('/:id', (req, res) => {
 });
 
 // This creates a new user when they sign up
-router.post('/', (req, res) => {
+router.post('/signup', (req, res) => {
   // expects {name: 'Lernantino || Jane Smith', email: 'lernantino@gmail.com', password: 'password1234'}
   User.create({
     name: req.body.name,
@@ -98,7 +98,7 @@ router.post('/login', (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
-      req.session.name = dbUserData.name;
+      req.session.email = dbUserData.email;
       req.session.loggedIn = true;
   
       res.json({ user: dbUserData, message: 'Login successful!' });
@@ -120,7 +120,7 @@ router.post('/logout', (req, res) => {
 
 // This updates a user's information
 router.put('/:id', (req, res) => {
-  // expects {username: 'Lernantino || Jane Smith', email: 'lernantino@gmail.com', password: 'password1234'}
+  // expects {name: 'Lernantino || Jane Smith', email: 'lernantino@gmail.com', password: 'password1234'}
 
   // pass in req.body instead to only update what's passed through
   User.update(req.body, {
