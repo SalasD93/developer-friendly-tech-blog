@@ -3,7 +3,7 @@
 
 ## Description
 
-For challenge 14 of the UM Coding Bootcamp, I had to create a tech blog using backend api routes, server, and database. I also had to incorporate a user-friendly mobile responsive frontend using handlebars, home routes, and JavaScript. Password encryption was required to successfully store a user to the database. I incorporated new CSS framework, Tailwind, to style the frontend.
+I created a tech blog using Node.js, Express.js, Sequelize, and MySQL for backend api routes, server, and database. I also had to incorporate a user-friendly mobile responsive frontend using Handlebars, CSS, home routes, and JavaScript. Password encryption, through bcrypt, was used to successfully store a user in the database. I incorporated a new CSS framework, Tailwind, to style the frontend. This blog allows people in the tech community to share thoughts and information. Signed in users have the ability to make, edit, and delete posts from their dashboard. Signed in users also have the ability to comment on other users' posts.
 
 
 ## Table of Contents
@@ -45,7 +45,9 @@ Node.js, Express.js, Sequelize, MySQL, JavaScript, Handlebars, CSS, Tailwind CSS
 
 ## Installation
 
-To install necessary dependencies, run the following command:
+Clone reposity onto your local machine.
+
+To install necessary dependencies, run the following command, after you cd into the cloned directory:
 ```md
 npm i
 ```
@@ -58,6 +60,8 @@ mysql -u root -p
 ---->source db/schema.sql
 npm run seed
 npm start
+
+navigate to localhost:3001 in your browser
 ```
 
 ## License
